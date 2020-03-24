@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+/* 
+1 rem = 10px and 10px is the root font size in the html 
+10/16 * 100
+*/
+/* Box sizing box border box change the box model so the the borders and paddings are no longer added to the total width or height we specify for the box */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
