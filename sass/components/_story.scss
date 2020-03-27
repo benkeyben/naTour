@@ -5,11 +5,11 @@
   padding-left: 9rem;
   box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
   background-color: rgba($color-white, 0.6);
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  -ms-border-radius: $border-radius;
+  -o-border-radius: $border-radius;
   font-size: $default-font-size;
   transform: skewX(-12deg);
   -webkit-transform: skewX(-12deg);
