@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/icon-font.css" />
+    <!-- <link rel="stylesheet" href="css/icon-font.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -42,7 +42,7 @@
     </div>
     <header class="header">
       <div class="header__logo-box">
-        <img src="img/logo-white.png" alt="Logo" class="header__logo" />
+        <img srcset="img/logo-white.png " alt="Logo" class="header__logo" />
       </div>
 
       <div class="header__text-box">
@@ -79,13 +79,27 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
-              <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" />
-            </div>
-            <div class="composition">
-              <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" />
-            </div>
-            <div class="composition">
-              <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" />
+              <img
+                src="img/nat-1-large.jpg"
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw"
+                alt="Photo 1"
+                class="composition__photo composition__photo--p1"
+              />
+              <img
+                src="img/nat-2-large.jpg"
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 2"
+                class="composition__photo composition__photo--p2"
+              />
+              <img
+                src="img/nat-3-large.jpg"
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo 3"
+                class="composition__photo composition__photo--p3"
+              />
             </div>
           </div>
         </div>
@@ -192,7 +206,7 @@
             </div>
           </div>
           <div class="col-1-of-3">
-            <div class="card">
+            <div class="card" id="card">
               <div class="card__side card__side--front">
                 <div class="card__picture card__picture--3">
                   &nbsp;
@@ -329,7 +343,14 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo" />
+        <picture class="footer__logo">
+          <source srcset="img/logo-green-small-2x.png 2x, img/logo-green-small-1x.png 1x" media="(max-width: 37.5em)" />
+          <img
+            src="img/logo-green-2x.png"
+            srcset="img/logo-green-2x.png 2x, img/logo-green-1x.png 1x"
+            alt="Full logo"
+          />
+        </picture>
       </div>
 
       <div class="row">
@@ -373,7 +394,7 @@
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur ut repellat dolores fugiat, eveniet
             totam, voluptas aut optio quis nisi illum perferendis fuga
           </p>
-          <a href="#" class="btn btn--green">Book now</a>
+          <a href="#card" class="btn btn--green">Book now</a>
         </div>
       </div>
     </div>
